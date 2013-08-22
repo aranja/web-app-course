@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>App Development - Lecture 1</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Eirikur Nilsson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../lecture-1/css/reveal.min.css">
+		<link rel="stylesheet" href="../lecture-1/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lecture-1/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../lecture-1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lecture-1/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+		<div class="slides">
+
+		    <section>
+				<h1>app development</h1>
+			    <div>Part 1: HTML</div>
+			</section>
+
+			<section>
+				<h1>css</h1>
+				<ul>
+					<li><a href="http://jsbin.com/idupog/5/edit">Positioning</a><a href="http://docs.webplatform.org/wiki/tutorials/absolute_and_fixed_positioning" target="_blank">*</a></li>
+					<li><a href="http://jsbin.com/iyuper/2/edit">Images</a><a href="http://www.css3.info/preview/multiple-backgrounds/" target="_blank">*</a></li>
+					<li><a href="http://jsbin.com/ARIgoMi/3/edit">Animations</a><a href="http://docs.webplatform.org/wiki/tutorials/css_animations" target="_blank">*</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/CSS/transform">Transformations</a></li>
+					<li><a href="http://jsbin.com/eyihom/2/edit">Transitions</a><a href="http://docs.webplatform.org/wiki/tutorials/css_transitions" target="_blank">*</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>javascript</h1>
+				<ul>
+					<li><a href="http://zeptojs.com/#on">Events</a></li>
+					<li><a href="http://jsbin.com/iwedir/1/edit">Objects &amp; Prototype</a></li>
+					<li><a href="http://jsbin.com/emofir/1/edit">Closures</a><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Closures" target="_blank">*</a></li>
+					<li><a href="http://jsbin.com/OfeX/2/edit">Context</a><a href="http://www.bennadel.com/blog/2265-Changing-The-Execution-Context-Of-JavaScript-Functions-Using-Call-And-Apply-.htm" target="_blank">*</a></li>
+					<li><a href="http://jsbin.com/iCAQ/2/edit">Loops</a><a href="http://javascriptweblog.wordpress.com/2011/01/04/exploring-javascript-for-in-loops/" target="_blank">*</a></li>
+				</ul>
+			</section>
+
+		    <section>
+		    	<h2>Reading material</h2>
+		    	<ul>
+		    		<li>
+		    			<a href="http://bonsaiden.github.com/JavaScript-Garden/">Javascript Garden</a>
+		    		</li>
+		    		<li>
+		    			<a href="https://developer.mozilla.org/en-US/">MDN</a>
+		    		</li>
+		    	</ul>
+		    </section>
+		</div>
+		</div>
+
+
+		<script src="../lecture-1/lib/js/head.min.js"></script>
+		<script src="../lecture-1/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lecture-1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lecture-1/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lecture-1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lecture-1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lecture-1/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
