@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>App Development - Lecture 1</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Eirikur Nilsson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../lecture-1/css/reveal.min.css">
+		<link rel="stylesheet" href="../lecture-1/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lecture-1/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../lecture-1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lecture-1/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+		<div class="slides">
+
+		    <section>
+				<h1>app development</h1>
+			    <div>Part 1: HTML</div>
+			</section>
+
+			<section>
+				<h2>Accelerometer</h2>
+	            <br>
+				<ul>
+					<li>Device Orientation</li>
+					<li>Device Motion</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Orientation Axes</h2>
+	            <br>
+				<img src="http://devfiles.myopera.com/articles/9472/device-axes.png" />
+			</section>
+
+			<section>
+				<h2>Orientation Alpha</h2>
+	            <br>
+				<img src="http://dev.opera.com/articles/view/w3c-device-orientation-api/device-alpha.png" />
+			</section>
+
+			<section>
+				<h2>Orientation Beta</h2>
+	            <br>
+				<img src="http://dev.opera.com/articles/view/w3c-device-orientation-api/device-beta.png" />
+			</section>
+
+			<section>
+				<h2>Orientation Gamma</h2>
+	            <br>
+				<img src="http://dev.opera.com/articles/view/w3c-device-orientation-api/device-gamma.png" />
+			</section>
+
+			<section>
+				<h2>Reading material</h2>
+	            <br>
+				<ul>
+					<li><a href="http://dev.opera.com/articles/view/w3c-device-orientation-api/">Device Orientation</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/DOM/Touch_events">Touch events</a></li>
+					<li><a href="http://zeptojs.com/#touch">Hammer.js for Touch</a></li>
+					<li><a href="http://howlerjs.com">Web Audio with Howler.js</a></li>
+				</ul>
+			</section>
+		</div>
+		</div>
+
+
+		<script src="../lecture-1/lib/js/head.min.js"></script>
+		<script src="../lecture-1/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lecture-1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lecture-1/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lecture-1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lecture-1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lecture-1/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
