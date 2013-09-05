@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>App Development - Lecture 5</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Eirikur Nilsson and Aegir Thorsteinsson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../lecture-1/css/reveal.min.css">
+		<link rel="stylesheet" href="../lecture-1/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lecture-1/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../lecture-1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lecture-1/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+			  <section>
+					<h1>App Development</h1>
+				  <div>Part 1: HTML</div>
+				</section>
+
+		    <section>
+		      <h1>Building</h1>
+		      <h3>grunt build</h3>
+		      <p>Dist folder ready for deployment.</p>
+
+		      <aside class="notes">
+		      	- Linting all JavaScript files against JSHint
+						Recompiling all CoffeeScript and SASS files for production
+						- Using r.js to compile and optimize any AMD modules
+						Concatenation and minification of scripts and stylesheets
+						- Compressing your images using OptiPNG for PNG files and JPEGtran-turbo for JPEGs
+						- Running any unit tests written against a headless WebKit browser (via PhantomJS)
+						- Creating an Application Cache manifest via Confess.js
+						- Using revision filenames or oldernames
+					</aside>
+		    </section>
+
+		    <section>
+		    	<h1>Deployment</h1>
+		    	<p>Deploy dist folder to any static file server.</p>
+		    </section>
+
+		    <section>
+		    	<h1>Github hosting</h1>
+		    	<h2>gh-pages branch</h2>
+		    </section>
+
+		    <section>
+		    	<h1>Distribution</h1>
+		    </section>
+
+		    <section>
+		    	<h1>Chrome Web Store</h1>
+		    	<p>$5 developer fee.</p>
+		    	<p><a href="https://developers.google.com/chrome/web-store/docs/money">Google gets 5%.</a></p>
+		    	<p><a href="https://chrome.google.com/webstore/developer/dashboard">Host or package the game.</a></p>
+
+		    	<aside class="notes">
+		    		$5 is the fee for developer account. You can test your game without paying (and publish within your domain), but need to pay for publishing.
+		    		Hosted = your own web server. 
+		    		Packaged = upload zip with the game.
+		    	</aside>
+		    </section>
+		    <section>
+		    	<h1>Windows Store</h1>
+		    	<p>$49 developer fee.</p>
+		    	<p>Microsoft gets 30%.</p>
+		    	<p><a href="http://www.windowsstore.com/developers/web">Get Visual Studio for free.</a></p>
+		    	<aside class="notes">
+		    		$49 for individuals and $99 for companies.
+		    		The 2012 Express edition of Visual Studio is free.
+		    	</aside>
+		    </section>
+		    <section>
+		    	<h1>App Store</h1>
+		    	<p>$99/year developer fee.</p>
+		    	<p>Apple gets 30%.</p>
+		    	<p><a href="http://build.phonegap.com">Adobe PhoneGap Build</a></p>
+		    	<aside class="notes">
+		    		$99 for individuals and $249 for companies.
+		    		With PhoneGap Build you can upload your code (or fetch from github directly) and build it for all platforms (iOS, Windows Phone, HP, Android, Blackberry and Symbian).
+		    		You need to add signing key for iOS, Android and Blackberry. Phonegap Build will provide packaged apps for the platforms, ready to publish.
+		    	</aside>
+		    </section>
+
+		    <section>
+		    	<h1>Play Store</h1>
+		    	<p>$25 developer fee.</p>
+		    	<p>Google gets 30%.</p>
+		    </section>
+			</div>
+		</div>
+
+
+		<script src="../lecture-1/lib/js/head.min.js"></script>
+		<script src="../lecture-1/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lecture-1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lecture-1/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lecture-1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lecture-1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lecture-1/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

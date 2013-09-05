@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>App Development - Lecture 1</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Eirikur Nilsson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../lecture-1/css/reveal.min.css">
+		<link rel="stylesheet" href="../lecture-1/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lecture-1/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../lecture-1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lecture-1/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+		<div class="slides">
+
+		    <section>
+				<h1>app development</h1>
+			    <div>Part 1: HTML</div>
+			</section>
+
+		    <section>
+		        <h1>Performance</h1>
+		    </section>
+
+			<section>
+				<h2>Profiling</h2>
+				<h3>really! no premature optimizations</h3>
+	            <br>
+	            <p>Chrome Inspector is your friend.</p>
+			</section>
+
+			<section>
+				<h2>Profiling</h2>
+	            <br>
+				<ul>
+					<li>Frames</li>
+					<li>Memory and GC</li>
+					<li>CPU</li>
+					<li><a href="http://jsperf.com/">jsperf.com</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>DOM/Graphics performance</h2>
+				<ul>
+					<li><a href="https://developers.google.com/speed/articles/javascript-dom">Minimize reflows and render</a></li>
+					<li>Work in document fragments</li>
+					<li><a href="https://github.com/montagejs/montage/wiki/Naming-Conventions#css-classes">Simple CSS selectors</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Compositing</h2>
+				<img src="http://www.sencha.com/img/20110715-understanding-hardware-acceleration-on-mobile-browsers-layered-leaves.jpg" />
+			</section>
+
+			<section>
+				<h2>Memory optimizations</h2>
+				<p>Minimize:
+				<ol>
+					<li>leaks</li>
+					<li>object creation</li>
+					<li>function/closure creation</li>
+					<li>DOM creation</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>JS Microoptimizations</h2>
+				<ul>
+					<li><a href="http://jsperf.com/prototype-vs-closures/2">Subproperty/Closure/Prototype lookups</a></li>
+					<li><a href="http://jsbin.com/iCAQ/2/">Loops</a></li>
+					<li><a href="http://jsperf.com/inline-vs-external-function-call">Function invocations</a></li>
+					<li><a href="http://blog.appfog.com/daniel-clifford-on-optimizing-javascript-for-the-v8-engine/">Class types</a></li>
+				</ul>
+			</section>
+
+		</div>
+		</div>
+
+
+		<script src="../lecture-1/lib/js/head.min.js"></script>
+		<script src="../lecture-1/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../lecture-1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lecture-1/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lecture-1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lecture-1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lecture-1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: '../lecture-1/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
